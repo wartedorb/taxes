@@ -1,3 +1,10 @@
+'''
+
+Case-study #2 TAXES
+Developers:
+Bikmetov Ed. (40%) Bychkov K. (40%) Kondrashov M. (40%)
+
+'''
 
 # Cycle counting an annual income.
 
@@ -9,11 +16,17 @@ for month in range(12):
     income = float(input())
     annual_income += income
 print('Your annual income is', annual_income, '$')
+
+# Tax deduction
 tax_deduction = float(input('What is your tax deduction? '))
+
+# Income for tax counting
 an_income = annual_income - tax_deduction
 
-status = int(input('If you are single, enter 1. If you have a spouse, enter 2. If you have children but no spouse, enter 3. ' ))
+# Status of a person
+status = int(input('If you are single, enter 1. If you have a spouse, enter 2. If you have children but no spouse, enter 3. '))
 
+# Income measures for different statuses
 if status == 1:
     a = 9075
     b = 36900
@@ -36,6 +49,7 @@ elif status == 3:
     e = 405100
     f = 432200
 
+# Tax counter
 if 0 <= an_income <= a:
     N1 = 0.1*an_income
     n=N1
@@ -57,4 +71,7 @@ elif e < an_income <= f:
 elif f < an_income:
     N1 = an_income - f
     n = a*0.10+((b-a)*0.15)+(c-b)*0.25+(d-c)*0.28+(e-d)*0.33+(f-e)*0.35+N1*0.396
+
+# Total tax
+
 print(n)
