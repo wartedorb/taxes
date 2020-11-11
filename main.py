@@ -1,3 +1,4 @@
+master
 # Cycle counting an annual income.
 name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 
@@ -17,3 +18,5 @@ if status==2:
 if status==3:
 
 
+
+Ed
